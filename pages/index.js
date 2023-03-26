@@ -2,6 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import BarChart from '@/components/BarChart'
+import { PieChart } from '@/components/PieChart'
+import LineChart from '@/components/LineChart'
+import Header from '@/components/Header'
+
 
 export default function Home() {
   return (
@@ -13,7 +17,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-       <BarChart />
+        <Header />
+        <div className = {styles.container}>
+          <BarChart />
+          <PieChart />
+        </div>
+        <LineChart />
       </main>
     </>
   )

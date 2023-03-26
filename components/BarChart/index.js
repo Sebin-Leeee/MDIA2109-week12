@@ -31,11 +31,17 @@ export default function BarChart(){
 
     useEffect(() => {
         setChartData({
-            labels: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
+            labels: ["2013", "2015", "2017", "2019", "2021"],
             datasets: [
                 {
-                    label: 'Sales $',
-                    data: [15323,19213,12124,17423,19213,23214,12142],
+                    label: 'Revenue ($)',
+                    data: [5217, 6738.1, 8047, 9374.9 , 11268.8],
+                    borderColor: 'rgb(65, 118, 175)',
+                    backgroundColor: 'rgba(65, 118, 175, 0.4)'
+                },
+                {
+                    label: 'Expenses ($)',
+                    data: [4905.2, 6163.9, 7772.9, 9065.0, 10790.4],
                     borderColor: 'rgb(53,162,235)',
                     backgroundColor: 'rgba(53,162,235,0.4)'
                 }
@@ -49,7 +55,7 @@ export default function BarChart(){
                 },
                 title: {
                     display: true,
-                    text: "Daily Revenue"
+                    text: "Motion picture and video production in Canada"
                 }
             },
             maintainAspectRatio: false,
